@@ -14,7 +14,8 @@
                     document.getElementById("response").innerHTML = this.responseText;
                 }
             };
-            xhttp.open("GET", "springboot-backend/students", true);
+            xhttp.open("GET", "http://springboot-backend-sample.2886795277-80-elsy07.environments.katacoda.com/students", true);
+            xhttp.setRequestHeader("Content-type", "application/json");
             xhttp.send();
         }
     </script>
