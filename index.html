@@ -1,28 +1,14 @@
 <html>
 <body>
-    <form>
-        Keyword:<br>
-        <input type="text" name="keyword" onkeyup="callREST()"><br>
-    </form>
-    <div id="response"></div>
 
-    <script>
-        function callREST() {
-            var xhttp = new XMLHttpRequest();
-            
-            // xhttp.onreadystatechange = function() {
-            // if (this.readyState == 4 && this.status == 200) {
-            // Typical action to be performed when the document is ready:
-            //    var response = xhttp.responseText;
-            //    console.log("ok"+response);
-            //    };
-            // var response = xhttp.responseText;
-            // };
-            xhttp.open("GET", "http://springboot-backend-sample.2886795277-80-elsy07.environments.katacoda.com/students", true);
-            xhttp.send();
-            var response = xhttp.responseText;
-            };
-    </script>
+<h1>My First JavaScript</h1>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p id="demo"></p>
+
 </body>
 </html>
 
