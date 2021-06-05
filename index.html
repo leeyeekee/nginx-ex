@@ -7,11 +7,19 @@
   <body>
     <div id="map"></div>
     <p>Hello World</p>
+    
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-    <script
-      src="http://springboot-backend-sample.2886795277-80-elsy07.environments.katacoda.com/students"
-      async
-    ></script>
+    <script type="text/javascript">
+      var apiUrl = 'http://springboot-backend-sample.2886795277-80-elsy07.environments.katacoda.com/students';
+      fetch(apiUrl).then(response => {
+        return response.json();
+      }).then(data => {
+        // Work with JSON data here
+        console.log(data);
+      }).catch(err => {
+        // Do something for an error here
+      });
+    </script>
   </body>
 </html>
 <!-- [END maps_map_simple] -->
